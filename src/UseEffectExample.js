@@ -4,7 +4,7 @@ const UseEffectExample = () => {
   const [count, setCount] = useState(0);
   const [otherCount, setOtherCount] = useState(5);
 
-  //Runs only once if empty array (first time)
+  //run only when changes are made to specific variable
   useEffect(() => {
     document.title = `${otherCount} new messages`;
     console.log('run + 1 ');
