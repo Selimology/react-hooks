@@ -1,12 +1,19 @@
 import UseEffectExample from './UseEffectExample';
 import UseStateExample from './UseStateExample';
+import { createContext } from 'react';
+
+// Step 1 . Create Context and assign name.
+export const LoginContext = createContext();
 
 function App() {
   return (
-    <div>
-      {/* <UseStateExample /> */}
-      <UseEffectExample />
-    </div>
+    //Step 2. Provider and give value
+    <LoginContext.Provider value={2}>
+      <div>
+        {/* <UseStateExample /> */}
+        <UseEffectExample />
+      </div>
+    </LoginContext.Provider>
   );
 }
 
