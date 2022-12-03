@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const UseStateExample = () => {
   // const [name, setName] = useState('');
   // const [click, setClick] = useState(0);
