@@ -4,6 +4,7 @@ import { createContext } from 'react';
 import UseRefExample from './UseRefExample';
 import UseReducerExample from './UseReducerExample';
 import UseLayoutEffectExample from './UseLayoutEffect';
+import UseMemoExample from './UseMemoExample';
 
 // Step 1 . Create Context and assign name.
 export const LoginContext = createContext();
@@ -17,7 +18,8 @@ function App() {
         {/* <UseEffectExample /> */}
         {/* <UseRefExample /> */}
         {/* <UseReducerExample /> */}
-        <UseLayoutEffectExample />
+        {/* <UseLayoutEffectExample /> */}
+        <UseMemoExample />
       </div>
     </LoginContext.Provider>
   );
