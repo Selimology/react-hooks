@@ -1,28 +1,22 @@
-import React, { useState, useRef } from 'react';
-import { useEffect } from 'react';
+import React, { useRef } from 'react';
 
 const UseRefExample = () => {
-  const [name, setName] = useState('');
+  //* UseRef is to edit the DOM element or update variable, without re-rendering
+  const inputEl = useRef();
+  const outputEl = useRef();
 
-  const count = useRef(0);
-  console.log(count);
-
-  useEffect(() => {
-    count.current = count.current + 1;
-  });
-
-  //! useEffect runs,and once it renders, due to a change, it renders again
-  // const [count, setCount] = useState(0);
-
-  // useEffect(() => {
-  //   setCount((prev) => prev + 1);
-  // });
+  const handleClick = () => {
+    //* You can output inputEl , to see all the DOM element list
+    console.log(inputEl);
+    inputEl.current.style.width = '400px';
+    outputEl.current.focus();
+  };
 
   return (
     <div>
-      <input type="text" onChange={(e) => setName(e.target.value)} />
-      <h2>Name : {name}</h2>
-      <h2>Renders: {count.current}</h2>
+      <input type="text" ref={inputEl} />
+      <button onClick={handleClick}>Click Here</button>
+      <textarea name="" id="" cols="30" rows="10" ref={outputEl}></textarea>
     </div>
   );
 };
