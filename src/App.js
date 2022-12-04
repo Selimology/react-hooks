@@ -2,6 +2,7 @@ import UseEffectExample from './UseEffectExample';
 import UseStateExample from './UseStateExample';
 import { createContext } from 'react';
 import UseRefExample from './UseRefExample';
+import UseReducerExample from './UseReducerExample';
 
 // Step 1 . Create Context and assign name.
 export const LoginContext = createContext();
@@ -13,7 +14,8 @@ function App() {
       <div>
         {/* <UseStateExample /> */}
         {/* <UseEffectExample /> */}
-        <UseRefExample />
+        {/* <UseRefExample /> */}
+        <UseReducerExample />
       </div>
     </LoginContext.Provider>
   );
